@@ -1,0 +1,49 @@
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+
+<body>
+
+<a href="/">戻る</a>
+
+<form action="" method="GET">
+  <input type="hidden" name="restart" value="{{restart}}">
+  
+  <div>
+    <label>Station SSID</label><br>
+    <input name="stssid" value="{{stssid}}" />
+  </div>
+  <div>
+    <label>Station Password</label><br>
+    <input name="stpass" value="{{stpass}}" />
+  
+  <div>
+    <label>AP SSID</label><br>
+    <input name="apssid" value="{{apssid}}" />
+  </div>
+  <div>
+    <label>AP Password</label><br>
+    <input name="appass" value="{{appass}}" />
+  </div>
+  
+  <br>
+  <button type='submit'>更新</button>
+  <br> 
+</form>
+<br>
+<br>
+
+<a href="/restart">再起動</a>
+
+<br>
+{{msg}}
+
+</script>
+
+</body>
+</html>
+
