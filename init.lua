@@ -92,6 +92,13 @@ function restartpage(urlparams)
   return {}
 end
 
+
+--設定初期化ページ
+function allresetpage(urlparams)
+  file.remove(CONFIGFILE)
+  return {msg=""}
+end
+
 --モニタページ
 function monitorpage(urlparams)
   local tplvars = {}
@@ -107,7 +114,7 @@ end
 --パスと処理関数の対応テーブル
 --テンプレートファイルはパスに.htmlをつけたものが使われる
 --例えば /configが指定されたら、configpage()が処理され、テンプレートにconfig.htmlが使用される
-routetbl = {index=indexpage, config=configpage, restart=restartpage, monitor=monitorpage}
+routetbl = {index=indexpage, config=configpage, restart=restartpage, monitor=monitorpage, allreset=allresetpage}
 
 -- create a TCP server
 if svr~=nil then
